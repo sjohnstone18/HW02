@@ -70,7 +70,9 @@ private:
 		void set_number(const std::string& new_number) {
 			number = new_number;
 		}
-
+		void set_name(const std::string& new_name) {
+			name = new_name;
+		}
 	private:
 		std::string name;
 		std::string number;

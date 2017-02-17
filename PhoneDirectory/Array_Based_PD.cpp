@@ -8,6 +8,7 @@
 #include <fstream>
 #include <istream>
 #include <ostream>
+#include <iostream>
 
 using namespace std;
 
@@ -118,7 +119,9 @@ string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please
 	int index = find(name);
 	if (index != -1) {
 		string holder = the_directory[index].get_number();
-		for (int j = 0; j<2; j++)//goes twice in order to remove both name and number
+		the_directory[index].set_name("");
+		the_directory[index].set_number("");
+		cout << "I ran!";
 		for (int i = index; i < size - 1; i++)
 			the_directory[i] = the_directory[i + 1];
 		return holder;
